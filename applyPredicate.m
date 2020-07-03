@@ -7,9 +7,9 @@ function outImg=applyPredicate(img, predicate)
             for y = 1:height
                 oldVal = img(x, y, color);
                 if predicate(oldVal)
-                    outImg(x, y, color) = 255;
-                else
                     outImg(x, y, color) = 0;
+                else
+                    outImg(x, y, color) = 255;
                 end
             end
         end

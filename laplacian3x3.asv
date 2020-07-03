@@ -1,0 +1,3 @@
+function outImg=laplacian3x3(img)
+    kernel = [0, -1, 0; -1, 4, -1; 0, -1, ];
+    outImg = applyMask(double(img), kernel, 1);

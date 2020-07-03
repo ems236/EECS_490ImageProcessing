@@ -1,0 +1,26 @@
+function val=zeroCrossPositive(img, x, y)
+    val = 0;
+    if pxInBounds(img, x, y, 1) > 0
+        for neighborX=-1:1
+            if pxInBounds(img, x + neighborX, y, 1) <= 0
+                    val = 255;
+            end
+        end
+        for neighborY=-1:1
+            if pxInBounds(img, x, y + neighborY, 1) <= 0
+                    val = 255;
+            end
+        end
+    else
+        posNeighbor = 0;
+        for neighborX=-1:1
+            if pxInBounds(img, x + neighborX, y, 1) <= 0
+                    posNeighb;
+            end
+        end
+        for neighborY=-1:1
+            if pxInBounds(img, x, y + neighborY, 1) <= 0
+                    val = 255;
+            end
+        end
+    end
