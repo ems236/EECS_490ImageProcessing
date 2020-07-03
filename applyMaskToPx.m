@@ -14,7 +14,7 @@ function newVal=applyMaskToPx(img, x, y, color, mask, coefficient)
             
             %disp(pxVal);
             
-            sum = sum + (int32(pxVal) * mask(maskX, maskY));
+            sum = sum + (double(pxVal) * mask(maskX, maskY));
             %disp(sum);
        end
     end

@@ -5,7 +5,7 @@ function imgCopy=applyMask(img, mask, coefficient)
     for color = 1:cols
         for x = 1:width
             for y = 1:height
-                imgCopy(x, y, color) = uint8(applyMaskToPx(img, x, y, color, mask, coefficient));
+                imgCopy(x, y, color) = applyMaskToPx(img, x, y, color, mask, coefficient);
             end
         end
     end
