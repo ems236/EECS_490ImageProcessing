@@ -1,6 +1,6 @@
-function edgeMap=sobelEdgeMap(img, thresholdRatio)
-    xGrad = sobel7x7Horizontal(img);
-    yGrad = sobel7x7Vertical(img);
+function edgeMap=sobelEdgeMap(img, horizontalFunc, verticalFunc, thresholdRatio)
+    xGrad = horizontalFunc(img);
+    yGrad = verticalFunc(img);
     gradientNorm = gradientMagnitude(xGrad, yGrad);
     %imshow(uint8(gradientNorm));
     threshold = thresholdRatio * maxVal(gradientNorm);

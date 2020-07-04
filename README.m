@@ -43,7 +43,7 @@ saveas(f1, outputDir + "building-sobel-edge.png");
 f2 = figure;
 title("Sobel edge map for building_noise.raw");
 building_noise = readraw(srcDir + "building_noise.raw");
-edgeMap = sobelEdgeMap(building_noise, 0.5);
+edgeMap = sobelEdgeMap(building_noise, 0.2);
 imshow(edgeMap);
 
 writeraw(edgeMap, outputDir + "building-sobel-edge_noise.raw");
@@ -65,7 +65,7 @@ saveas(f3, outputDir + "building-laplace-edge.png");
 
 f4 = figure;
 title("Laplace edge map for building_noise.raw");
-edgeMap = laplaceEdgeMap(building_noise, 0.5);
+edgeMap = laplaceEdgeMap(building_noise, 0.2);
 imshow(edgeMap);
 writeraw(edgeMap, outputDir + "building-laplace-edge_noise.raw");
 disp("writing to " + outputDir + "building-laplace-edge_noise.raw");
