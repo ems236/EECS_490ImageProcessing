@@ -1,4 +1,4 @@
-function val=zeroCrossPositive(img, x, y, threshold)
+function val=zeroCrossPositive(img, x, y)
     max = -Inf;
     min = Inf;
     for neighborX=-1:1
@@ -13,10 +13,4 @@ function val=zeroCrossPositive(img, x, y, threshold)
         end
     end
     
-    if max - min > threshold
-        val = 0;
-    else
-        val = 255;
-    end
-    
-    %val = max - min;
+    val = max - min;
