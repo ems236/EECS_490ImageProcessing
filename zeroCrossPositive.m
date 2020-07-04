@@ -1,6 +1,6 @@
 function val=zeroCrossPositive(img, x, y)
-    max = -Inf;
-    min = Inf;
+    max = 0;
+    min = 0;
     for neighborX=-1:1
         for neighborY=-1:1
             pxVal = pxInBounds(img, x + neighborX, y + neighborY, 1);
@@ -13,4 +13,8 @@ function val=zeroCrossPositive(img, x, y)
         end
     end
     
-    val = max - min;
+    if max == 0 || min == 0
+        val = 0;
+    else
+        val = max - min;
+    end

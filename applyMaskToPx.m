@@ -5,7 +5,7 @@ function newVal=applyMaskToPx(img, x, y, color, mask, coefficient)
     maskCenterX = ceil(maskWidth / 2);
     maskCenterY = ceil(maskHeight / 2);
  
-    sum = 0;
+    sum = 0.0;
     for maskX = 1:maskWidth
        for maskY = 1:maskHeight
             offsetX = maskX - maskCenterX;
