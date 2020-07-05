@@ -8,3 +8,5 @@ function val=readPxZeroOutOfBounds(img, x, y)
     else 
         val = img(y, x);
     end
+    
+    val = uint16(val);
