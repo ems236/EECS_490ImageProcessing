@@ -187,7 +187,7 @@ writeraw(edgeMap, outputDir + name + ".raw");
 disp("writing to " + outputDir + name + ".raw");
 saveas(f13, outputDir + name + ".png");
 
-disp("Skeletonizing pcb...");
+disp("Skeletonizing patterns...");
 f14 = figure;
 title("Skeletonizing patterns");
 skeletonPattern = morphologicalProcess(patterns, skeletonizeConditional, skeletonizeInhibitor);
@@ -200,7 +200,6 @@ saveas(f14, outputDir + name + ".png");
 disp("Shrinking pcb...");
 f15 = figure;
 title("Shrinking pcb");
-imshow(pcb);
 shrinkPattern = morphologicalProcess(pcb, shrinkConditional, shrinkInhibitor);
 imshow(shrinkPattern);
 name = "pcb-shrink";

@@ -1,13 +1,13 @@
 function outImg=morphologicalProcess(img, conditionalLookup, inhibitorLookup)
     binary = toBinary(img);
     %disp(binary);
-    [width, height] = size(img);
+    [height, width] = size(img);
     
     outImg = binary;
     shouldContinue = true;
     while shouldContinue
         shouldContinue = false;
-        marked = zeros(width, height);
+        marked = zeros(height, width);
         for x = 1:width
             for y = 1:height
                 if hitOrMiss(outImg, x, y, conditionalLookup)
@@ -21,7 +21,7 @@ function outImg=morphologicalProcess(img, conditionalLookup, inhibitorLookup)
                 %end
             end
         end
-        %disp(uint8(marked));
+        %disp(uint8(marked(10:20, 5:15)));
         for x = 1:width
             for y = 1:height
                 if marked(y, x) == 1 && ~hitOrMiss(marked, x, y, inhibitorLookup)
@@ -30,7 +30,7 @@ function outImg=morphologicalProcess(img, conditionalLookup, inhibitorLookup)
                 end
             end
         end
-        %disp(outImg);
+        %disp(outImg(10:20, 5:15));
         %imshow(fromBinary(outImg));
     end
     
