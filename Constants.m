@@ -75,7 +75,7 @@ classdef Constants
         
         SHRINK_UNCONDITIONAL=[
             %Spur
-            0b00101000; 0b10001000;
+            0b001010000; 0b100010000;
             
             %Single 4-Conn
             0b000010010; 0b000011000;
@@ -253,7 +253,7 @@ classdef Constants
     
     THIN_UNCONDITIONAL=[
             %Spur
-            0b00101000; 0b10001000;
+            0b001010000; 0b100010000;
             
             %Single 4-Conn
             0b000010010; 0b000011000;

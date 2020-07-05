@@ -6,5 +6,5 @@ function val=readPxZeroOutOfBounds(img, x, y)
     elseif y < 1 || y > height
         val = 0;
     else 
-        val = img(x, y);
+        val = img(y, x);
     end

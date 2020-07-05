@@ -1,0 +1,5 @@
+function outVal=stackPx(img, x, y)
+    outVal = 0;
+
+    pxVal = readPxZeroOutOfBounds(img, x - 1, y + 1);
+    outVal = outVal + pxVal * 2^(0);
