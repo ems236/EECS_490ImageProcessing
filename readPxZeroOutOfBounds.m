@@ -1,5 +1,5 @@
 function val=readPxZeroOutOfBounds(img, x, y)
-    [width, height] = size(img);
+    [height, width] = size(img);
    
     if x < 1 || x > width
         val = 0;
